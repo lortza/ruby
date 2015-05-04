@@ -17,3 +17,8 @@ word3 = {:word => "crappy", :part => "adjective", :definition => "generally not 
 dictionary = [word1, word2, word3]
 
 puts dictionary
+
+dictionary.each do |x|
+ puts "heeeey, #{x}."
+  
+end
