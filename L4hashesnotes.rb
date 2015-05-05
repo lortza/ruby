@@ -57,3 +57,18 @@ students.each do |x|
  puts "#{x[:name]} is a #{x[:gender]} with a #{x[:os]} "
 end
 
+
+# this is an exercise in pulling the info back out of the array of hashes
+tool1 = {:name => "hammer", :electricity_needed => "no", :located => "tool belt"}
+tool2 = {:name => "screw driver", :electricity_needed => "no", :located => "tool belt"}
+tool3 = {:name => "drill", :electricity_needed => "yes", :located => "case"}
+tool4 = {:name => "wrench", :electricity_needed => "no", :located => "tool box"}
+
+# this is an array that pulls in a collection of hashes
+toolbox = [tool1, tool2, tool3, tool4]
+
+# user_answer == questions_answers[questions_answers.key(value_answer)]
+
+puts "#{toolbox[1][:name].capitalize} is located at #{toolbox[1][:located]}"
+
+
