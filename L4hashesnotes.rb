@@ -6,19 +6,22 @@ puts "L4 Hash Lesson".upcase.center(header_size)
 puts "~" * header_size
 puts "\n" * 2
 
-# a hash is like a dictionary
 # "hash" has to be capitalized --> like this Hash
 
 # to create a new hash...
 myhash1 = {}
 
 #or
-myhash2 = Hash.new
+myhash2 = Hash.new #Hash is a class that creates an object
 
 # a key is the category and a value is the thing a person enters
 # a key is "name" while a value is "sia"
 
-my_hash = {"name" => "Sia", "hometown" => "Houston", "age" => 21}
+my_hash = {"name" => "Sia", "hometown" => "Houston", "age" => 21} #gant does not like using this syntax, b/c there is no symbol. if you can use symbols, use symbols. use this syntax only when you have to break the rules.
+my_hash = {name: "Sia", hometown: "Houston", age: 21} #new syntax example that is user-friendly, but will convert to the next one below
+my_hash = {:name => "Sia", :hometown => "Houston", :age => 21} #the classic syntax using the key as a symbol
+
+
 
 #to enter an item into a hash... 
 
@@ -33,7 +36,7 @@ my_hash[:item2] # call it back out  like this (which yields "2" in this ex)
 
 my_hash = {"name" => "Sia", "hometown" => "Houston"} # if the key was formed like this
 my_hash["name"] # call it back out  like this (which yields "sia" in this ex)
-
+my_hash[:name] # call it back out  like this (which yields "sia" in this ex)
 
 #my hash.each {|key, value| puts "The key is #{key} and the value is #{value}."}
 # or 

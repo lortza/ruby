@@ -9,18 +9,34 @@ puts "\n"
 
 #------CODES-THAT-WILL-BLOW-YOUR-MIND---------
 
-# def doubleThis num
-#   numTimes2 = num*2
-#   puts num.to_s+' doubled is '+numTimes2.to_s
-# end
+#classes
 
-# input = gets.chomp.to_i
-# doubleThis input
+#object-oriented programming is creating things, then
+#letting them interact. the "class" is the blueprint
+#of how an object should behave.
 
-def say_moo n
-  puts "mooooooo...." * n
+#an object is an instance of a class 
+
+class Cup #<-- classes are named in TitleCase
+  def initialize # <-- every class will be initialized
+    puts "i'm alive!!!!"
+    @drink_amount = 0 # <-- the @ is the symbol of a instance variable
+  end
+
+  def fill
+    puts "i'm filled up"
+    @drink_amount = 100
+  end
+
+  def empty
+    puts "all gone!"
+    @drink_amount = 0
+
+  def quantity
+    puts @drink_amount
+  end
+
 end
 
-say_moo 3
-puts "muah"
-say_moo 10
+#unlike the CSS i'v known, we save all of our classes in their own files.
+#this Cup class will live in its own cup.rb file

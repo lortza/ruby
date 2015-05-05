@@ -46,6 +46,9 @@ while mom_says == "no" do
   until mom_says != "no"
 end
 
+# practical application is in gettting user submission and you need it to be
+# a number and not other submissions
+
 
 #Times Do Loop (this will rarely be used)
 puts "~~~~~ Times Do Loop - a preferred method ~~~~~~"

@@ -40,3 +40,15 @@ classroom = ["Kevin", "Leigh", "Blake", "Robert", "Sabrina", "Anne", "Cory"]
 .reverse
 .sort (alpha)
 .shuffle (random)
+
+#we can also add and subtract numbers
+[1,2,3,4] - [2,4]
+#will yield
+[1,3]
+
+# and
+[1,2,3,4] + [2,4]
+# will yield
+[1,2,3,4,2,4]
+
+
