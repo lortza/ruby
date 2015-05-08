@@ -1,7 +1,7 @@
 class Cup #<-- classes are named in TitleCase
   def initialize #every class will be initialized
     puts "i'm alive!!!!"
-    @drink_amount = 0 # <-- the @ is the symbol of a instance variable
+    @drink_amount = 0 # <-- the @ is the symbol of an instance variable
   end
 
   def fill

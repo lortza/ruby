@@ -9,34 +9,66 @@ puts "\n"
 
 #------CODES-THAT-WILL-BLOW-YOUR-MIND---------
 
-#classes
+# can we have a cat?
 
-#object-oriented programming is creating things, then
-#letting them interact. the "class" is the blueprint
-#of how an object should behave.
+# puts "can we have a cat?"
+# response = gets.chomp.downcase
 
-#an object is an instance of a class 
+# while response.include? "no"
+#     if response.include? "no"
+#       puts "how about now?"
+#       response = gets.chomp.downcase
+#     elsif response.include? ("yes" or "fine" or "maybe" or "ask your father" or "ask your mother")
+#       puts "YAY!"
+#     else
+#       puts "so is that a yes?"
+#       response = gets.chomp.downcase
+#     end#if
+# end#while
+  
 
-class Cup #<-- classes are named in TitleCase
-  def initialize # <-- every class will be initialized
-    puts "i'm alive!!!!"
-    @drink_amount = 0 # <-- the @ is the symbol of a instance variable
-  end
 
-  def fill
-    puts "i'm filled up"
-    @drink_amount = 100
-  end
 
-  def empty
-    puts "all gone!"
-    @drink_amount = 0
 
-  def quantity
-    puts @drink_amount
-  end
 
-end
+# person = {:first => "first name", :last => "last name", :pet_breed => "breed", :qty_pets => 5}
 
-#unlike the CSS i'v known, we save all of our classes in their own files.
-#this Cup class will live in its own cup.rb file
+
+# puts "Hello. what's your first name?"
+# firstname = gets.chomp.capitalize
+# person[:first] = firstname
+
+# puts "What's your last name?"
+# lastname = gets.chomp.capitalize
+# person[:last] = lastname
+
+# puts "What type of pet do you have, #{person[:first]}?"
+# pet = gets.chomp.downcase
+# person[:pet_breed] = pet
+
+# puts "How many #{person[:pet_breed]}s do you have?"
+# qty = gets.chomp.to_i
+# person[:qty_pets] = qty
+
+# puts "Hi #{person[:first]} #{person[:last]}. I am glad to hear you have #{person[:qty_pets]} #{person[:pet_breed]}s."
+
+# puts person
+
+
+# ---------------------------
+# classroom = ["Kevin", "Leigh", "Blake", "Robert", "Sabrina", "Anne", "Cory"]
+# puts classroom.join(', ')
+
+puts "please enter a name"
+entries = []
+name = gets.chomp.downcase
+entries.push(name)
+
+puts entries
+
+
+
+
+
+
+

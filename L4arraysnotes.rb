@@ -51,4 +51,18 @@ classroom = ["Kevin", "Leigh", "Blake", "Robert", "Sabrina", "Anne", "Cory"]
 # will yield
 [1,2,3,4,2,4]
 
+classroom = ["Kevin", "Leigh", "Blake", "Robert", "Sabrina", "Anne", "Cory"]
+
+classroom.each do |x|
+  if x == classroom[-1]
+    print "#{x}."
+  else
+    print "#{x}, "
+  end#if
+  
+end #each
+
+# this will yield
+# Kevin, Leigh, Blake, Robert, Sabrina, Anne, Cory.
+
 
