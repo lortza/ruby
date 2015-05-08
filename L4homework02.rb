@@ -17,23 +17,43 @@ puts space
 
 # =========== START PROGRAM =====================
 
-# create array with all gift givers
-givers = ["Anne", "Blake", "Cory", "Gant", "Kevin", "Leigh", "Robert", "Sabrina", "Sia", "Tony"]
+# # create array with all gift givers
+# givers = ["Anne", "Blake", "Cory", "Gant", "Kevin", "Leigh", "Robert", "Sabrina", "Sia", "Tony"]
 
-# create array with all gift getters
-getters = ["Anne", "Blake", "Cory", "Gant", "Kevin", "Leigh", "Robert", "Sabrina", "Sia", "Tony"]
+# # create array with all gift getters
+# getters = ["Anne", "Blake", "Cory", "Gant", "Kevin", "Leigh", "Robert", "Sabrina", "Sia", "Tony"]
 
-# display lists of both givers and getters
-puts "The givers are: " + givers.to_s
-puts space
-puts "The getters are: " + getters.to_s
-puts space
+# # display lists of both givers and getters
+# puts "The givers are: " + givers.to_s
+# puts space
+# puts "The getters are: " + getters.to_s
+# puts space
 
 
-givers.each.sample do |x|
-  x = givers.pop
-end
-puts "\n" * 2
+# givers.each.sample do |x|
+#   x = givers.pop
+# end
+# puts "\n" * 2
 
+
+puts "hey it's time to make those pesky secret santa assignments."
+puts "don't worry, i can do it for you."
+puts
+puts "please enter the name of each participant one at a time."
+puts "when you're finished, type \"done\"."
+
+entries = []
+name_entry = gets.chomp.downcase
+
+while name_entry != "done"
+  entries.push(name_entry)
+  name_entry = gets.chomp.downcase
+end#while
+until name_entry == "done"
+  end
+
+if name_entry == "done"
+  puts "you've entered #{entries.join(", ")}"
+end#if
 
 

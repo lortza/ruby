@@ -59,12 +59,28 @@ puts "\n"
 # classroom = ["Kevin", "Leigh", "Blake", "Robert", "Sabrina", "Anne", "Cory"]
 # puts classroom.join(', ')
 
-puts "please enter a name"
-entries = []
-name = gets.chomp.downcase
-entries.push(name)
+puts "hey it's time to make those pesky secret santa assignments."
+puts "don't worry, i can do it for you."
+puts
+puts "please enter the name of each participant one at a time."
+puts "when you're finished, type \"done\"."
 
-puts entries
+entries = []
+name_entry = gets.chomp.downcase
+
+while name_entry != "done"
+  entries.push(name_entry)
+  name_entry = gets.chomp.downcase
+end#while
+until name_entry == "done"
+  end
+
+if name_entry == "done"
+  puts "you've entered #{entries.join(", ")}"
+end#if
+
+
+# D3yV6yXnqPOR
 
 
 
