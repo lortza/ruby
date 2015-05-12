@@ -75,3 +75,46 @@ toolbox = [tool1, tool2, tool3, tool4]
 puts "#{toolbox[1][:name].capitalize} is located at #{toolbox[1][:located]}"
 
 
+# this moves items from an array into a hash
+
+blockbusters = [['will smith', 'i am legend'], ['brad pitt', 'fight club'], ['elijah wood', 'the hobbit']]
+result = {}
+
+blockbusters.each do |name, movie|
+  result[name] = movie
+end
+
+puts result
+
+#yields
+{"will smith" => "i am legend", "brad pitt" => "fight club", "elijah wood" => "the hobbit"}
+
+# OR
+result = {}
+blockbusters.each do |sub_array|
+  result[sub_array[0]] = sub_array[1]
+end
+result # same result, but less readable code
+
+
+#---------------------------
+#this takes user input and stores it in a single hash, then interpolates the responses
+
+hash_one = {}
+puts "enter your first name"
+hash_one[:first] = gets.chomp
+
+puts "enter your last name"
+hash_one[:last] = gets.chomp
+
+puts "enter your pet's name"
+hash_one[:pet_name] = gets.chomp 
+
+puts "enter your pet's breed"
+hash_one[:pet_breed] = gets.chomp
+
+puts "Hello #{hash_one[:first].capitalize} #{hash_one[:last].capitalize}. How is #{hash_one[:pet_name].capitalize}, your pet #{hash_one[:pet_breed].downcase}?"
+
+#---------------
+
+

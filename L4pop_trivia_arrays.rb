@@ -35,8 +35,8 @@ answers = ["madonna", "gant", "ben stiller"]
 
 questions.each do |n|
   puts n
-  answer = gets.chomp.downcase
-  if answer == answers[questions.index(n)]
+  user_answer = gets.chomp.downcase
+  if user_answer == answers[questions.index(n)]
     puts "Correct"
   else
     puts "Nope!"

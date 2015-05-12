@@ -18,3 +18,18 @@
     puts x
   end #if    
 end #each
+
+
+# here's a variation using arrays and only calling fizzbuzz
+
+range = (1..100).to_a
+fizzbuzz = []
+
+range.each do |x|
+  if (x % 3 == 0) and (x % 5 == 0)
+    fizzbuzz.push(x)
+  end
+end
+
+print fizzbuzz
+

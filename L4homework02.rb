@@ -17,43 +17,68 @@ puts space
 
 # =========== START PROGRAM =====================
 
-# # create array with all gift givers
-# givers = ["Anne", "Blake", "Cory", "Gant", "Kevin", "Leigh", "Robert", "Sabrina", "Sia", "Tony"]
+# in people terms...
+# gather names
+# put names in a hat
+# mix up the names in the hat
+# of those names, assign a giver
+# assign a receiver to each giver
+# the giver can't be the receiver
 
-# # create array with all gift getters
-# getters = ["Anne", "Blake", "Cory", "Gant", "Kevin", "Leigh", "Robert", "Sabrina", "Sia", "Tony"]
+# classroom = ["Kevin", "Leigh", "Blake", "Robert", "Sabrina", "Anne", "Cory"]
 
-# # display lists of both givers and getters
-# puts "The givers are: " + givers.to_s
-# puts space
-# puts "The getters are: " + getters.to_s
-# puts space
+# # ask for names
+# puts "Hey it's time to make those pesky secret santa assignments."
+# puts "We'll use virtual scraps of paper and a virtual hat."
+# sleep (2)
+# puts
+# puts "Please enter the name of each participant one at a time."
+# puts "When you're finished, type \"done\"."
 
+# #gather names into an array
+# collection_hat = []
+# name_entry = gets.chomp.downcase
 
-# givers.each.sample do |x|
-#   x = givers.pop
-# end
-# puts "\n" * 2
+# while name_entry != "done"
+#   collection_hat.push(name_entry)
+#   name_entry = gets.chomp.downcase
+# end#while
+# until name_entry == "done"
+#   end
 
+# # display names that have been entered
+# if name_entry == "done"
+#   puts "You've entered #{collection_hat.join(", ")}"
+# end#if
 
-puts "hey it's time to make those pesky secret santa assignments."
-puts "don't worry, i can do it for you."
+names = ["Kevin", "Leigh", "Blake", "Robert", "Sabrina", "Anne", "Cory"]
+puts "NAMES ENTERED:"
+puts names
 puts
-puts "please enter the name of each participant one at a time."
-puts "when you're finished, type \"done\"."
+puts "NAMES SHUFFLED:"
+names = names.sort{rand}
+puts names.to_s
 
-entries = []
-name_entry = gets.chomp.downcase
+results = []
 
-while name_entry != "done"
-  entries.push(name_entry)
-  name_entry = gets.chomp.downcase
-end#while
-until name_entry == "done"
-  end
+names.each do |x|
+  results.push(x, ) #<-- stopped here
+end#names.each
 
-if name_entry == "done"
-  puts "you've entered #{entries.join(", ")}"
-end#if
+puts
+puts "RESULTS:"
+puts results
+
+
+# my_array[0] = "apple"
+# dogs.push("Spot")
+# dogs << "Fido"
+
+# << [x, collection_hat[counter]]
+
+
+#  I took an easy way out.  First I loaded my array of names, which was called "names".  Then I randomized the array using "names = names.sort{rand}".  There are a couple of different ways to do the randomization -- don't forget the !bang option on some of them.  Then I just did loop where #1 gave gift to #2; #2 gave gift to #3; #3 gave gift to #4;  ... #n gave gift to #1.
+
+# [8:59 PM] Robert Turner: Since I had randomized the array, then it didn't matter that I just assigned names sequentially.  This worked with a pretty simple Secret Santa, where there were no other constraints.  
 
 

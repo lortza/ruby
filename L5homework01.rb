@@ -101,7 +101,6 @@ puts alphabits["k"]
 base = 0
 roll = base + 1 + rand(10)
 
-
 while roll != 7
   puts roll
   roll = base + 1 + rand(10)
@@ -113,14 +112,30 @@ if roll == 7
   puts "7 - STOP"
 end
 
-# Sabrina's solution
+# Sabrina's solution puts everything into an array and then displays the array
 n = 1
 random_numbers = []
+
 while n != 7
  n = rand(1..10)
  random_numbers.push(n)
 end
+
 puts "#{random_numbers}"
+
+
+#my streamlined approach
+roll = 1 + rand(10)
+
+while roll != 7
+  puts roll
+  roll = 1 + rand(10)
+  sleep(1)
+end
+
+if roll == 7
+  puts "7 <-- hey look"
+end
 
 
 # ---------------
@@ -148,6 +163,24 @@ end
 
 puts "There were #{attempts.length} attempts before hitting 7 and #{lessthan6.length} of them were 6 and below."
 puts "Those attempts were: #{attempts}"
+
+#my solution based on sabrina's solution
+
+n = 1
+numbers = []
+uptosix = []
+
+while n != 7
+  n = rand(1..10)
+  numbers.push(n)
+    if n <= 6
+      uptosix.push(n)
+    end
+end
+
+puts numbers
+puts "-----"
+puts uptosix.length
 
 
 

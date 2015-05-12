@@ -82,6 +82,18 @@ puts "~~~~~ Each Do in a Range (Including the Bookends) PREFERRED WITH ARRAYS ~~
 end
 puts "\n" * 2
 
+# here's an example followed by a shortcut
+array1 = []
+
+(1..5).each do |x|
+  array1 << x
+  # OR this: new_array.push(x)
+end
+
+# this is the shortcut
+array1 = (1..5).to_a
+
+
 # or do it with an array to make something happen to each item in the array
 
 to_do = ["wash the car", "buy groceries", "finish your homework", "pay the bills"]
