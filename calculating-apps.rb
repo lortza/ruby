@@ -78,7 +78,8 @@ puts "year"
 year = gets.chomp
 
 user_bday = Time.mktime(year, month, day)
-today = Time.mktime(2015, 5, 11)
+today = Time.now
+# today = Time.mktime(2015, 5, 11)
 difference_seconds = today - user_bday
 difference_years = difference_seconds / 60 / 60 / 24 / 365
 
@@ -95,6 +96,30 @@ sleep(2)
 puts spank difference_years.to_i #ooh look at this method just going to town!
 
 #----------------------
+# set of dice that roll and then give you a total
 
+class Die
+  def roll
+    1 + rand(6)
+  end#def
+end #class
+
+die1 = Die.new
+die2 = Die.new
+die3 = Die.new
+
+dice = [die1, die2]
+
+scorepad = 0
+
+dice.each do |x|
+  x = x.roll.to_i #rolls each die and turns it into an integer
+  puts x #displays the value of the roll
+  scorepad = x + scorepad #adds each roll to the scorepad and redefines the scorepad as having that roll in it
+end# each do
+  puts "---"
+  puts scorepad
+
+  #------------------------
 
 

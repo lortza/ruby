@@ -2,7 +2,7 @@
 # that method on a bs variable within a while loop and had it terminate 
 # when "want_to_play" = no
 
-want_to_play = "yes"
+want_to_play = "y"
 
 def play_game(x)
   #game title
@@ -115,15 +115,15 @@ end # ends play_game method
 # apply that action to a base number
 base = 0
 
-while  want_to_play == "yes" do 
+while  want_to_play == "y" do 
   play_game(base)
-  puts "Want to play again?"
+  puts "Want to play again? y | n "
         want_to_play = gets.chomp.downcase
         puts "\n" *2
   end
-  until want_to_play == "no"
+  until want_to_play == "n"
   end
 
-if want_to_play == "no"
+if want_to_play == "n"
   puts "Fine. Off you go then."
 end

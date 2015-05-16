@@ -1,4 +1,5 @@
-title = "Welcome to the Sandbox, bitches"
+
+title = "Bienvenidos al Cajón de Arena!"
 maxlength = title.length.to_i + 6
 puts "\n"
 puts "~" * maxlength
@@ -8,49 +9,25 @@ puts "\n"
 
 
 #------CODES-THAT-WILL-BLOW-YOUR-MIND---------
-item_count = 24
 
-for n in 19..item_count
-  if n.to_s.end_with? "11"
-     puts "What is the name of the #{n}th item?"
-     @item = gets.chomp.to_s
-      puts "How many #{@item}s are in inventory?"
-      @count = gets.chomp.to_i
-  elsif n.to_s.end_with? "12"
-     puts "What is the name of the #{n}th item?"
-     @item = gets.chomp.to_s
-      puts "How many #{@item}s are in inventory?"
-      @count = gets.chomp.to_i
-  elsif n.to_s.end_with? "13"
-     puts "What is the name of the #{n}th item?"
-     @item = gets.chomp.to_s
-      puts "How many #{@item}s are in inventory?"
-      @count = gets.chomp.to_i    
-  elsif n.to_s.end_with? "1"
-     puts "What is the name of the #{n}st item?"
-     @item = gets.chomp.to_s
-      puts "How many #{@item}s are in inventory?"
-      @count = gets.chomp.to_i
-  elsif n.to_s.end_with? "2"
-     puts "What is the name of the #{n}nd item?"
-     @item = gets.chomp.to_s
-      puts "How many #{@item}s are in inventory?"
-      @count = gets.chomp.to_i
-  elsif n.to_s.end_with? "3"
-    puts "What is the name of the #{n}rd item?"
-    @item = gets.chomp.to_s
-      puts "How many #{@item}s are in inventory?"
-      @count = gets.chomp.to_i
-  else
-    puts "What is the name of the #{n}th item?"
-    @item = gets.chomp.to_s
-      puts "How many #{@item}s are in inventory?"
-      @count = gets.chomp.to_i
-  end #if
-  # @inventory[@item] = @count #<-- what is this doing?
-end #for
+class Die
+  def roll
+    1 + rand(6)
+  end#def
+end #class
 
+die1 = Die.new
+die2 = Die.new
+die3 = Die.new
 
+dice = [die1, die2]
 
+scorepad = 0
 
-
+dice.each do |x|
+  x = x.roll.to_i #rolls each die and turns it into an integer
+  puts x #displays the value of the roll
+  scorepad = x + scorepad #adds each roll to the scorepad and redefines the scorepad as having that roll in it
+end# each do
+  puts "---------"
+  puts scorepad
