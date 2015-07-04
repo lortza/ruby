@@ -1,4 +1,4 @@
-title = "Tarot Mystic 3-Card Reading!"
+title = "Tarot Mystic 3-Card Reading by Madame Sbaitso"
 maxlength = title.length.to_i + 6
 puts "\n"
 puts "~" * maxlength
@@ -74,8 +74,10 @@ def reading(x)
   puts "What is your first name?"
   username = gets.chomp.capitalize
   sleep(1)
+  puts
   puts "Thank you, #{username}. Now the other person in this relationship, what is his or her name?"
   othername = gets.chomp.capitalize
+  puts
   puts "Thank you for that. Let's get started shall we?"
   sleep(2)
   puts
@@ -86,52 +88,48 @@ def reading(x)
   puts "The first card represents you, #{username}. It represents you and what you want out of this relationship with #{othername}."
   sleep(5)
   puts
-  puts "I've drawn the #{picksnames[0]}."
+  puts "I've drawn the #{picksnames[0]} card."
   sleep(2)
-  puts "The #{picksnames[0]} stands for #{picksmeanings[0].downcase}."
-  puts "I'll give you a few moments to think about how this applies to you."
+  puts "The #{picksnames[0]} card stands for #{picksmeanings[0].downcase}."
+  puts "I'll give you a few moments to think about how this applies to you and what you want out of this relationship with #{othername}."
   sleep(15)
   puts
   puts
   puts
   puts
-  puts "This next card represents #{othername} and what #{othername} wants from this relationship."
+  puts "This next card represents #{othername} and what #{othername} wants in this relationship with you."
   sleep(5)
   puts
-  puts "I've drawn the #{picksnames[1]}."
+  puts "I've drawn the #{picksnames[1]} card."
   sleep(2)
-  puts "The #{picksnames[1]} stands for #{picksmeanings[1].downcase}."
-  puts "I'll give you a few moments to think about how this applies to #{othername}."
+  puts "The #{picksnames[1]} card stands for #{picksmeanings[1].downcase}."
+  puts "I'll give you a few moments to think about how this applies to #{othername} and what #{othername} wants in this relationship with you."
   sleep(15)
   puts
   puts
   puts
   puts
-  puts "The last card is the relationship itself and where the relationship is currently heading. You and #{othername} can, of course, change this outcome."
+  puts "The last card is the current state of the relationship itself and where the relationship is heading. Of course, you and #{othername} can change this outcome."
   sleep(5)
   puts
-  puts "I've drawn the #{picksnames[2]}."
+  puts "I've drawn the #{picksnames[2]} card."
   sleep(2)
-  puts "The #{picksnames[2]} stands for #{picksmeanings[2].downcase}."
-  puts "I'll give you a few moments to think about how this applies to your relationship."
+  puts "The #{picksnames[2]} card stands for #{picksmeanings[2].downcase}."
+  puts "I'll give you a few moments to think about what this means for the current state of your relationship and what actions you may want to take to continue on this path or to change it."
     sleep(15)
   puts
   puts
   puts
   puts
   puts "This concludes our reading."
+  puts
 end
 
-
-
-
-
-# apply that action to a base number
 base = 0
 
 while  playagain == "y" do 
   reading(base)
-  puts "Care to do another reading? y | n "
+  puts "Would you care to do another reading? y | n "
         playagain = gets.chomp.downcase
         puts "\n" *2
   end
@@ -139,7 +137,7 @@ while  playagain == "y" do
   end
 
 if playagain == "n"
-  puts "I, Madame Sbaitso, wish you an enchanted life. Goodbye."
+  puts "Madame Sbaitso wishes you an enchanted life. Goodbye."
   puts
 end
 

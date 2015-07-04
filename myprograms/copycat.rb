@@ -25,6 +25,28 @@ if response == "i'm a dummy"
 puts "HA HA! You're a DUMMY!"
 end
 
+#another version with a simpler until loop
+puts "heeeeeey! you're a dummy! i'm totally going to copy everything you say and there's notihng you can do about it unless you admit you're a dummy! LOL. go on say something."
+response = gets.chomp.downcase
+  until response.include? "i'm a dummy" or response.include? "i admit it" 
+    puts "#{response.upcase}!"
+    puts
+    response = gets.chomp.downcase
+  end
+puts "."
+sleep(1)
+puts ".."
+sleep(1)
+puts "..."
+sleep(1)
+puts "...."
+sleep(1)
+puts "....."
+sleep(1)
+puts "HA HA! You're a DUMMY! LOL. kbai."
+
+# different program here:
+
 puts "\n" * 2
 puts "~~~~~~~~~ new program ~~~~~~~~~~~~"
 puts "\n" * 2

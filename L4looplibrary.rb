@@ -17,6 +17,14 @@ for n in 1..3
 end
 puts "\n" * 2
 
+# another example of a for loop. This one prints only even numbers from 1 to 10
+puts "======= EVEN NUMBERS FOR ========"
+
+for x in 1..10
+  if x % 2 == 0
+    puts x
+  end #if
+end #for
 
 # While Loop
 # This is great for when you need to repeat the loop block 
@@ -45,6 +53,18 @@ while mom_says == "no" do
   end
   until mom_says != "no"
 end
+
+# another example
+# this lists all even numbers from 0 to 11
+
+puts "======= EVEN NUMBERS UNTIL ========"
+x = 0
+until x == 11
+  if x % 2 == 0
+    puts x
+  end #if
+  x += 1
+end #until
 
 # practical application is in gettting user submission and you need it to be
 # a number and not other submissions
