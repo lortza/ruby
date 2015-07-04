@@ -1,4 +1,25 @@
-# cards
+def mme
+  my_str = <<-art
+
+           /'~~~~~~~~\  
+        ,/'/__\____,. `\ 
+       | _)'  \_____,\\_\ 
+      ,|/, ,,,   ,,, \_L_\ 
+      ( ( .<o>   <o>.  ,'( 
+       ))              ) ) 
+      ( (     `-'     ( (' 
+       ))\    ___,    ) ))   
+      ( ( \   `--'  /( ( ( 
+       ) ))|\______/| )) ) 
+      ( (( |        |( ((  
+       (,(,\________/,,),)  
+
+  art
+    puts my_str
+end #mme
+
+
+def shuffle
 fool = {:number => "0", :name => "Fool", :meaning => "Beginning, innocence, journey, spontaneity, free spirit", :theme => "Beginning"} 
 
 magician = {:number => "I", :name => "Magician", :meaning => "Intention, focus, will power, skill, purpose, creativity, resourcefulness", :theme =>"Intention"}
@@ -15,7 +36,7 @@ lovers = {:number => "VI", :name => "Lovers", :meaning => "Relationships, love, 
 
 chariot = {:number => "VII", :name => "Chariot", :meaning => "Direction, control, will power, victory, ambition, travel", :theme => "Travel"}
 
-strength = {:number => "VIII", :name => "Strength", :meaning => "Fortitude, inner strength, love, patience, compassion", :theme => "Strength"}
+strength = {:number => "VIII", :name => "Strength", :meaning => "Fortitude, inner strength, love, patience, compassion", :theme => "Fortitude & Patience"}
 
 hermit = {:number => "IX", :name => "Hermit", :meaning => "Solitude, soul-searching, introspection, being alone, inner guidance", :theme => "Solitude"}
 
@@ -43,61 +64,116 @@ judgment = {:number => "XIX", :name => "Judgment", :meaning => "Awakening, rebir
 
 world = {:number => "XXI", :name => "World", :meaning => "Enlightenment, completion, travel, perfect unity, accomplishment", :theme => "Enlightenment"}
 
-cards = [fool, magician, hp, empress, emperor, hierophant, lovers, chariot, strength, hermit, wheel, justice, hangedman, death, temperance, devil, tower, star, moon, sun, judgment, world]
+@cards = [fool, magician, hp, empress, emperor, hierophant, lovers, chariot, strength, hermit, wheel, justice, hangedman, death, temperance, devil, tower, star, moon, sun, judgment, world]
 
-picks = []
+@picks = []
   
-cards.sample(3).each do |x|
-  picks << x
+@cards.sample(3).each do |x|
+  @picks << x
   end
 
-lineWidth = 80
-line = "-------"
+end #shuffle
 
-puts "You".center(lineWidth/3) + "Them".center(lineWidth/3) + "Your Relationship".center(lineWidth/3)
-puts line.center(lineWidth/3) + line.center(lineWidth/3) + line.center(lineWidth/3)
-puts picks[0][:number].center(lineWidth/3) + picks[1][:number].center(lineWidth/3) + picks[2][:number].center(lineWidth/3)
+def firstcard
+  lineWidth = 80
+  line = "-------"
+  puts "You".center(lineWidth/3)
 
-puts picks[0][:name].center(lineWidth/3) + picks[1][:name].center(lineWidth/3) + picks[2][:name].center(lineWidth/3)
+  puts line.center(lineWidth/3) 
 
-puts picks[0][:theme].center(lineWidth/3) + picks[1][:theme].center(lineWidth/3) + picks[2][:theme].center(lineWidth/3)
+  puts @picks[0][:number].center(lineWidth/3)
+
+  puts @picks[0][:name].center(lineWidth/3) 
+
+  puts @picks[0][:theme].center(lineWidth/3) 
+  puts
+  puts
+end #secondcard
+
+def secondcard
+  lineWidth = 80
+  line = "-------"
+  puts "You".center(lineWidth/3) + "Them".center(lineWidth/3)
+
+  puts line.center(lineWidth/3) + line.center(lineWidth/3)
+
+  puts @picks[0][:number].center(lineWidth/3) + @picks[1][:number].center(lineWidth/3)
+
+  puts @picks[0][:name].center(lineWidth/3) + @picks[1][:name].center(lineWidth/3)
+
+  puts @picks[0][:theme].center(lineWidth/3) + @picks[1][:theme].center(lineWidth/3)
+  puts
+  puts
+end #secondcard
+
+def thirdcard
+  lineWidth = 80
+  line = "-------"
+  puts "You".center(lineWidth/3) + "Them".center(lineWidth/3) + "Your Relationship".center(lineWidth/3)
+
+  puts line.center(lineWidth/3) + line.center(lineWidth/3) + line.center(lineWidth/3)
+
+  puts @picks[0][:number].center(lineWidth/3) + @picks[1][:number].center(lineWidth/3) + @picks[2][:number].center(lineWidth/3)
+
+  puts @picks[0][:name].center(lineWidth/3) + @picks[1][:name].center(lineWidth/3) + @picks[2][:name].center(lineWidth/3)
+
+  puts @picks[0][:theme].center(lineWidth/3) + @picks[1][:theme].center(lineWidth/3) + @picks[2][:theme].center(lineWidth/3)
+  puts
+  puts
+end #thirdcard
 
 
 # begin game
 
-# def play_game
-# puts "Hello and welcome to my table." 
-#   puts "My name is Madame Sbaitso and I am going to do a tarot card reading for you about your relationship."
-#   puts 
+def play_game
+  shuffle
+  mme
+  puts "Hello and welcome to my table." 
+  puts "My name is Madame Sbaitso and I am going to do a tarot card reading for you about your relationship."
+  puts 
 
-#   puts "What is your first name?"
-#   username = gets.chomp.capitalize
-#   sleep(1)
-#   puts
-#   puts "Thank you, #{username}. Now the other person in this relationship, what is his or her name?"
-#   othername = gets.chomp.capitalize
-#   puts
-#   puts "Thank you for that. Let's get started shall we?"
-#   sleep(2)
-#   puts
-#   puts
-#   puts "The first card represents you, #{username}. It represents you and what you want out of this relationship with #{othername}."
-#   sleep(5)
-#   puts
-#   puts "I've drawn the #{@picks[0][:name]} card."
-#   sleep(2)
-#   puts "The #{@picks[0][:name]} card stands for #{@picks[0][:meaning].downcase}."
+  puts "What is your first name?"
+  username = gets.chomp.capitalize
+  sleep(1)
+  puts
+  puts "Thank you, #{username}. Now the other person in this relationship, what is his or her name?"
+  othername = gets.chomp.capitalize
+  puts
+  puts "Thank you for that. Let's get started shall we?"
+  sleep(2)
+  puts
+  puts "The first card represents you, #{username}. It represents you and what you want out of this relationship with #{othername}."
+  sleep(2)
+  puts
+    firstcard
+  puts "I've drawn the #{@picks[0][:name]} card."
+  sleep(2)
+  puts "The #{@picks[0][:name]} card stands for #{@picks[0][:meaning].downcase}."
+  puts
+
+  secondcard
+  puts "I've drawn the #{@picks[1][:name]} card."
+  sleep(2)
+  puts "The #{@picks[1][:name]} card stands for #{@picks[1][:meaning].downcase}."
+  puts
+
+  thirdcard
+  puts "I've drawn the #{@picks[2][:name]} card."
+  sleep(2)
+  puts "The #{@picks[2][:name]} card stands for #{@picks[2][:meaning].downcase}."
+  puts
+
+
+  puts "play again? ( y | n )"
+  response = gets.chomp.downcase
+  if response.include? "y"
+    play_game
+  else
+    puts "kbai"
+  end #if
+
+end #play_game
+
+play_game
+
   
-
-
-#   puts "Would you like to do another reading? ( y | n )"
-#   response = gets.chomp.downcase
-#   if response.include? "y"
-#     play_game
-#   else 
-#     puts "kbai."
-#   end #while
-
-# end #play_game
-
-# play_game
