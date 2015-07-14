@@ -81,4 +81,34 @@ for @x in 1..15
   end #if
 end #for
 
+#this is slightly different -- list then sum the fizzbuzz numbers using a method to define fizzbuzz
+
+@fizzbuzz = []
+
+def fizzbuzz x
+  if x % 5 == 0 && x % 3 == 0
+    @fizzbuzz << x
+  end
+end
+
+(1..100).each do |x|
+  fizzbuzz(x)
+end
+
+buzzsum = @fizzbuzz.inject(:+)
+puts buzzsum
+
+#this one also does the list and sum, but much more succinctly
+fizzbuzz = []
+
+(1..100).each do |x|
+  if x % 5 == 0 && x % 3 == 0
+    fizzbuzz << x
+    puts x
+  end #if
+end #each
+
+buzzsum = fizzbuzz.inject(:+)
+puts "---"
+puts buzzsum
 

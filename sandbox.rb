@@ -8,11 +8,12 @@ puts "~" * maxlength
 puts "\n"
 #------CODES-THAT-WILL-BLOW-YOUR-MIND---------
 
-nums = [1, 2, 3]
-letters = ['a', 'b', 'c']
 
-result = []
-
-nums.each do |x|
-  
+givers = ["Zorro", "DaPC", "Noche", "Nicadonskitty", "Yolanda", "DaBlanc"]
+givers.shuffle!
+getters = givers.rotate(1)
+pairs = givers.zip(getters)
+pairs.each do |give, get|
+  puts "#{give} gives to #{get}"
 end
+
