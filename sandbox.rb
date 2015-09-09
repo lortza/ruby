@@ -9,10 +9,13 @@ puts "\n"
 #------CODES-THAT-WILL-BLOW-YOUR-MIND---------
 
 
-givers = ["Zorro", "DaPC", "Noche", "Nicadonskitty", "Yolanda", "DaBlanc"]
+givers = ["Zorro", "DaPC", "Noche", "Robert", "Nicadonskitty", "Yolanda", "DaBlanc"]
 givers.shuffle!
+p givers
 getters = givers.rotate(1)
+p getters
 pairs = givers.zip(getters)
+p pairs
 pairs.each do |give, get|
   puts "#{give} gives to #{get}"
 end

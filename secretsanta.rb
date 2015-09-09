@@ -11,6 +11,32 @@ pairs.each do |give, get|
   puts "#{give} gives to #{get}"
 end
 
+# Seret santa with user input
+=begin
+puts "Enter the name of each participant one at a time."
+entry = gets.chomp.capitalize
+givers = []
+
+while entry != "Done"
+  givers.push(entry)
+  puts "#{entry} is now on the list."
+  puts "Type 'Done' when you're finished entering names."
+  entry = gets.chomp.capitalize
+end
+
+givers.shuffle!
+getters = givers.rotate(1)
+pairs = givers.zip(getters)
+sleep(1)
+puts
+puts
+puts "Here are the assignments: "
+sleep(1)
+pairs.each do |give, get|
+  puts "#{give} gives to #{get}"
+end
+=end
+
 # merging 2 arrays together http://stackoverflow.com/questions/12011294/combining-two-arrays-to-create-a-two-dimensional-array-in-ruby
 
 #first attempt -- DOES NOT WORK
