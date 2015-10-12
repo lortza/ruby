@@ -1,10 +1,12 @@
+# A fully-functioning play_again loop. Hooray!
+
 def play_game
    puts "OMG we're PLAYING!"
    play_again_query
 end #play_game
 
 def play_again_query
-  puts "Play again? Y | N?"
+  puts "Play again? Y | N"
   @input = gets.chomp.upcase 
   if @input == "Y"
     play_game
