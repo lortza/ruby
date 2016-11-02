@@ -100,7 +100,7 @@ def play_game
   puts "What is your first name?"
   @username = gets.chomp.capitalize
   sleep(1)
-  puts "Thank you, #{@username}. Now the other person in this relationship, what is his or her name?"
+  puts "Thank you, #{@username}. Now the other person in this relationship, what is their name?"
   @othername = gets.chomp.capitalize
   puts "Thank you for that. Let's get started shall we?"
   sleep(2)
