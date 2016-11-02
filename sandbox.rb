@@ -1,22 +1,8 @@
+#add all digits in a number
 
-title = "Todos Bienvenidos al Cajón de Arena!"
-maxlength = title.length.to_i + 6
-puts "\n"
-puts "~" * maxlength
-puts title.center(maxlength)
-puts "~" * maxlength
-puts "\n"
-#------CODES-THAT-WILL-BLOW-YOUR-MIND---------
+input = 12345
+output = 15
+p output == input.to_s.split('').map(&:to_i).reduce(:+)
 
 
-givers = ["Zorro", "DaPC", "Noche", "Robert", "Nicadonskitty", "Yolanda", "DaBlanc"]
-givers.shuffle!
-p givers
-getters = givers.rotate(1)
-p getters
-pairs = givers.zip(getters)
-p pairs
-pairs.each do |give, get|
-  puts "#{give} gives to #{get}"
-end
 
