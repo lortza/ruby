@@ -1,0 +1,26 @@
+body {
+  color: gray;
+  background-color: black;
+} /* body */
+
+.btn {
+  padding: 10px;
+  border-radius: 3px;
+  text-align: center;
+} /* .btn */
+
+.btn-primary {
+  color: white;
+  background-color: green;
+} /* .btn-primary */
+
+.row {
+  clear: both;
+  margin: 5px 0px;
+  overflow: auto;
+} /* .row */
+
+.col-md-9 {
+  float: left;
+  margin: 0px 2px;
+} /* .col-md-9 */
