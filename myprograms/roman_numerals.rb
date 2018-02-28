@@ -34,4 +34,17 @@ end
 
 p convert_to_roman(2017)
 
+# Use as test suite:
+# p convert_to_roman(1) == 'I'
+# p convert_to_roman(5) == 'V'
+# p convert_to_roman(9) == 'IX'
+# p convert_to_roman(10) == 'X'
+# p convert_to_roman(20) == 'XX'
+# p convert_to_roman(12) == 'XII'
+# p convert_to_roman(24) == 'XXIV'
+# p convert_to_roman(25) == 'XXV'
+# p convert_to_roman(38) == 'XXXVIII'
+# p convert_to_roman(49) == 'XLIX'
+# p convert_to_roman(89) == 'LXXXIX'
+
 
