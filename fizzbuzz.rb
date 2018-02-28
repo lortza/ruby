@@ -9,14 +9,14 @@
 (1..30).each do |x|
   if ((x % 3 == 0) and (x % 5 == 0))
     puts "#{x} - fizzbuzz by 3 and 5"
-  elsif 
+  elsif
       x % 3 == 0
     puts "#{x} - fizz by 3"
   elsif x % 5 == 0
     puts "#{x} - buzz by 5"
   else
     puts x
-  end #if    
+  end #if
 end #each
 
 
@@ -76,7 +76,7 @@ for @x in 1..15
   elsif @x % 3 == 0
     fizz
   elsif @x % 5 == 0
-    buzz 
+    buzz
   else
   end #if
 end #for
