@@ -20,6 +20,12 @@
 #
 # end
 
+# Test Cases:
+# YES: 0 3 4 2
+# NO: 0 2 5 3
+# Timeout test case: 43 2 70 2
+
+
 
 #### Refactored Version ####
 class Kangaroo
@@ -56,13 +62,32 @@ end
 
 
 module CompatibilityChecker
-  @result = "NO"
+  @result = 'NO'
 
-  def self.compare_kangaroos(k1, k2)
+  def self.using_brute_force(k1, k2)
+    # This method is effective for 29/30 test cases and times out with inputs 43 2 70 2
     until self.done?(k1, k2)
       k1.jump
       k2.jump
     end
+  end
+
+  def self.using_physics(k1, k2)
+    # This method passes only 22/30 test cases.
+    #Current location is x plus number of hops times the distance per hop
+    # L(t) = x + v * t
+    # current_location(num_hops) = x + jump_length * num_hops
+    # num_hops = (k2.position - k1.position) / (k1.jump_length - k2.jump_length)
+
+    num_hops = (k2.position - k1.position) / (k1.jump_length - k2.jump_length)
+    @result = 'YES' if (num_hops > 0 && num_hops.class == Integer)
+  end
+
+  def self.compare_kangaroos(k1, k2)
+    return 'NO' if k1.has_passed_other?(k2)
+    return 'NO' if k2.has_passed_other?(k1)
+    self.using_brute_force(k1, k2)
+    # self.using_physics(k1, k2)
     return @result
   end
 
