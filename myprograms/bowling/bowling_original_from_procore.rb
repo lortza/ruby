@@ -1,5 +1,5 @@
 
-class BowlingGame
+class BowlingGameOriginal
   # Scoring
   # 1 point per pin
   # Spare ( [N, /] ): 10 points + value of next roll

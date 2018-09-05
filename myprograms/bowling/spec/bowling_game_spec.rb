@@ -1,5 +1,7 @@
-require 'rspec/autorun'
-require './bowling'
+# require 'rspec/autorun'
+require 'pry'
+require_relative '../bowling_game'
+# require './bowling_original_from_procore'
 
 
 describe 'BowlingGame' do
@@ -10,6 +12,7 @@ describe 'BowlingGame' do
         ).calculate_score
       ).to eq 61
   end
+
   it 'handles zeroes' do
     expect(
       BowlingGame.new(
@@ -17,6 +20,7 @@ describe 'BowlingGame' do
         ).calculate_score
       ).to eq 40
   end
+
   it 'handles spares' do
     expect(
       BowlingGame.new(
@@ -24,6 +28,7 @@ describe 'BowlingGame' do
         ).calculate_score
       ).to eq 69
   end
+
   it 'handles strikes' do
     expect(
       BowlingGame.new(
@@ -31,6 +36,7 @@ describe 'BowlingGame' do
         ).calculate_score
       ).to eq 87
   end
+
   it 'handles spares followed by a strike' do
     expect(
       BowlingGame.new(
@@ -38,6 +44,7 @@ describe 'BowlingGame' do
         ).calculate_score
       ).to eq 112
   end
+
   it 'handles strikes followed by a spare' do
     # current score + 10 for strike, plus 10 for the spare, plus the value of one more frame past the spare
     expect(
@@ -46,39 +53,44 @@ describe 'BowlingGame' do
       ).calculate_score
     ).to eq 118
   end
-  it 'handles consecutive strikes' do
+
+  xit 'handles consecutive strikes' do
     expect(
       BowlingGame.new(
         ['X', '-'], ['X', '-'], ['6', '3'], ['X', '-'], ['X', '-'], ['7', '/'], ['2', '1'], ['7', '2'], ['2', '3'], ['3', '2']
       ).calculate_score
     ).to eq 135
   end
-  # it 'handles a spare in the last frame' do
-  #   expect(
-  #     BowlingGame.new(
-  #       ['X', '-'], ['X', '-'], ['6', '3'], ['X', '-'], ['X', '-'], ['7', '/'], ['2', '1'], ['7', '2'], ['2', '3'], ['3', '/', '6']
-  #     ).calculate_score
-  #   ).to eq 146
-  # end
-  # it 'handles a strike in the last frame' do
-  #   expect(
-  #     BowlingGame.new(
-  #       ['X', '-'], ['X', '-'], ['6', '3'], ['X', '-'], ['X', '-'], ['7', '/'], ['2', '1'], ['7', '2'], ['2', '3'], ['X', '7', '2']
-  #     ).calculate_score
-  #   ).to eq 149
-  # end
-  # it 'handles a strike followed by a spare in the last frame' do
-  #   expect(
-  #     BowlingGame.new(
-  #       ['X', '-'], ['X', '-'], ['6', '3'], ['X', '-'], ['X', '-'], ['7', '/'], ['2', '1'], ['7', '2'], ['2', '3'], ['X', '7', '/']
-  #     ).calculate_score
-  #   ).to eq 150
-  # end
-  # it 'handles a perfect game' do
-  #   expect(
-  #     BowlingGame.new(
-  #       ['X', '-'], ['X', '-'], ['X', '-'], ['X', '-'], ['X', '-'], ['X', '-'], ['X', '-'], ['X', '-'], ['X', '-'], ['X', 'X', 'X']
-  #     ).calculate_score
-  #   ).to eq 300
-  # end
+
+  xit 'handles a spare in the last frame' do
+    expect(
+      BowlingGame.new(
+        ['X', '-'], ['X', '-'], ['6', '3'], ['X', '-'], ['X', '-'], ['7', '/'], ['2', '1'], ['7', '2'], ['2', '3'], ['3', '/', '6']
+      ).calculate_score
+    ).to eq 146
+  end
+
+  xit 'handles a strike in the last frame' do
+    expect(
+      BowlingGame.new(
+        ['X', '-'], ['X', '-'], ['6', '3'], ['X', '-'], ['X', '-'], ['7', '/'], ['2', '1'], ['7', '2'], ['2', '3'], ['X', '7', '2']
+      ).calculate_score
+    ).to eq 149
+  end
+
+  xit 'handles a strike followed by a spare in the last frame' do
+    expect(
+      BowlingGame.new(
+        ['X', '-'], ['X', '-'], ['6', '3'], ['X', '-'], ['X', '-'], ['7', '/'], ['2', '1'], ['7', '2'], ['2', '3'], ['X', '7', '/']
+      ).calculate_score
+    ).to eq 150
+  end
+
+  xit 'handles a perfect game' do
+    expect(
+      BowlingGame.new(
+        ['X', '-'], ['X', '-'], ['X', '-'], ['X', '-'], ['X', '-'], ['X', '-'], ['X', '-'], ['X', '-'], ['X', '-'], ['X', 'X', 'X']
+      ).calculate_score
+    ).to eq 300
+  end
 end
