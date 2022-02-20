@@ -1,5 +1,5 @@
 # Goal: convert integers to roman numerals, up to the number 1000
-# Check numbers here: http://www.onlineconversion.com/roman_numerals_advanced.htm
+# Check numbers here: https://www.rapidtables.com/math/symbols/roman-numerals-1-100.html
 
 @pairs = {
   1000 => "M",
